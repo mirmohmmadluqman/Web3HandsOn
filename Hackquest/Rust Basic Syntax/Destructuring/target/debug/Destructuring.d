@@ -1,0 +1,1 @@
+/mnt/c/Users/Mir\ Mohmmad\ Luqman/Documents/Trath/Web3HandsOn/Hackquest/Rust\ Basic\ Syntax/Destructuring/target/debug/Destructuring: /mnt/c/Users/Mir\ Mohmmad\ Luqman/Documents/Trath/Web3HandsOn/Hackquest/Rust\ Basic\ Syntax/Destructuring/src/main.rs
