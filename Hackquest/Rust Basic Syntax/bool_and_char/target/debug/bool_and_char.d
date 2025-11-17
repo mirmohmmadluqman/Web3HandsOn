@@ -1,0 +1,1 @@
+/mnt/c/Users/Mir\ Mohmmad\ Luqman/Documents/Trath/Web3HandsOn/Hackquest/Rust\ Basic\ Syntax/bool_and_char/target/debug/bool_and_char: /mnt/c/Users/Mir\ Mohmmad\ Luqman/Documents/Trath/Web3HandsOn/Hackquest/Rust\ Basic\ Syntax/bool_and_char/src/main.rs
