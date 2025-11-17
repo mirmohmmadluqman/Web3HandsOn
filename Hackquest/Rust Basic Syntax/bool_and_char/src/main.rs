@@ -44,9 +44,9 @@ fn get_calculate_result() -> bool {
 fn main() {
     let c1 = 'a';
     assert_eq!(size_of_val(&c1), 4);
-    // Type your answer here
+    // Type your answer here:
     let c2 = '中';
     assert_eq!(size_of_val(&c2), 4);
-    // Type your answer here
+    // Type your answer here:
     println!("Success!")
 }
