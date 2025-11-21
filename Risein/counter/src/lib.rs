@@ -4,15 +4,15 @@ use solana_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint,
     entrypoint::ProgramResult,
-    msg
-    program_error::ProgramError,
+    msg,
     pubkey::Pubkey,
 };
 
+use crate::instructions::CounterInstructions;
+
 pub mod instructions;
 
-#[derive(Debug, BorshSerialize, BorshDeserialize)]
-pub struct CounterAccount{
+#[derive(Debug, BorshDeserialize, BorshSerialize)]
+pub struct CounterAccount {
     pub counter: u32,
-
 }

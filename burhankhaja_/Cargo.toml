@@ -1,0 +1,11 @@
+[package]
+name = "beg"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+solana-sdk = "3.0.0"
+
+[[bin]]
+name = "BURHANKHAJA_"
+path = "src/lib.rs"

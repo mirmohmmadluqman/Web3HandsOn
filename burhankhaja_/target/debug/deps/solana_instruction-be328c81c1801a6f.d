@@ -1,0 +1,9 @@
+/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/BURHANKHAJA_/target/debug/deps/solana_instruction-be328c81c1801a6f.d: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/lib.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/account_meta.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/syscalls.rs
+
+/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/BURHANKHAJA_/target/debug/deps/libsolana_instruction-be328c81c1801a6f.rlib: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/lib.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/account_meta.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/syscalls.rs
+
+/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/BURHANKHAJA_/target/debug/deps/libsolana_instruction-be328c81c1801a6f.rmeta: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/lib.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/account_meta.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/syscalls.rs
+
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/lib.rs:
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/account_meta.rs:
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/solana-instruction-3.1.0/src/syscalls.rs:
