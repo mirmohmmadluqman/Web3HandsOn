@@ -1,22 +1,34 @@
-// use solana_sdk::{signature::Keypair, signer::Signer};
-
-// fn main() {
-//     let random_keypair = Keypair::new();
-
-//     // println!("Public key : {:?}", random_keypair.pubkey());
-//     println!("public key : {:?}", random_keypair.pubkey());
-//     println!("secret key : {:?}", random_keypair.secret_bytes());
-
-
-// }
-
-use solana_sdk::{signature::Keypair, signer::Signer};
-
 fn main() {
-    let random_keypair = Keypair::new();
-    println!("public key : {:?}", random_keypair.pubkey());
-    println!("secret key : {:?}", random_keypair.secret_bytes());
+    let gulbab : Person = Person {name: "gulipeer".to_string(), age: 69u8};
+    println!("{:?}", Person::new_rand()); // Person
+    //// println!("{:?}", gulbab::new_rand()); // # fails because new_rand() doesnt take self reference, 
+    // therefore these type of funcs can only be called on Struct Name
+    
+    ////  println!("{:?}", gulbab.new_rand())  /// ---> will fail too for same reason
+    
+    println!("{:?}", gulbab.new_rand_self()) 
+    
+}
 
-    let wallet = random_keypair.to_base58_string();
-    println!("wallet (base58) {:?}", wallet);
+
+#[derive(Debug)]
+struct Person {
+    name : String,
+    age : u8,
+}
+
+impl Person {
+    fn new_rand() -> Self {
+        Person {
+            name : "shahabudin".to_string(),
+            age : 91u8
+        }
+    }
+    
+      fn new_rand_self(&self) -> Self {
+        Self {
+            name : self.name.clone(), //// if clone() not prsent will fails >>> check data ownership later in rust doc
+            age : self.age
+        }
+    }
 }
