@@ -1,58 +1,12 @@
-   1.123186400s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint: fingerprint error for beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_)/Check { test: false }/TargetInner { name: "BURHANKHAJA_", doc: true, ..: with_path("C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\src\\main.rs", Edition2021) }
-   1.123277900s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_\target\debug\.fingerprint\beg-b7d578d29122da28\bin-BURHANKHAJA_`
-
-Caused by:
-    The system cannot find the file specified. (os error 2)
-
-Stack backtrace:
-   0: git_midx_writer_dump
-   1: git_midx_writer_dump
-   2: git_midx_writer_dump
-   3: git_midx_writer_dump
-   4: git_filter_source_repo
-   5: git_filter_source_repo
-   6: git_filter_source_repo
-   7: git_filter_source_repo
-   8: git_filter_source_repo
-   9: git_filter_source_repo
-  10: git_filter_source_repo
-  11: git_libgit2_prerelease
-  12: <unknown>
-  13: <unknown>
-  14: <unknown>
-  15: <unknown>
-  16: git_midx_writer_dump
-  17: git_filter_source_repo
-  18: git_midx_writer_dump
-  19: BaseThreadInitThunk
-  20: RtlUserThreadStart
-   1.143849900s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint: fingerprint error for beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_)/Check { test: true }/TargetInner { name: "BURHANKHAJA_", doc: true, ..: with_path("C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\src\\main.rs", Edition2021) }
-   1.143890800s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_\target\debug\.fingerprint\beg-da027be2087d0030\test-bin-BURHANKHAJA_`
-
-Caused by:
-    The system cannot find the file specified. (os error 2)
-
-Stack backtrace:
-   0: git_midx_writer_dump
-   1: git_midx_writer_dump
-   2: git_midx_writer_dump
-   3: git_midx_writer_dump
-   4: git_filter_source_repo
-   5: git_filter_source_repo
-   6: git_filter_source_repo
-   7: git_filter_source_repo
-   8: git_filter_source_repo
-   9: git_filter_source_repo
-  10: git_filter_source_repo
-  11: git_libgit2_prerelease
-  12: <unknown>
-  13: <unknown>
-  14: <unknown>
-  15: <unknown>
-  16: git_midx_writer_dump
-  17: git_filter_source_repo
-  18: git_midx_writer_dump
-  19: BaseThreadInitThunk
-  20: RtlUserThreadStart
+   0.016519200s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\src\\main.rs"
+   0.016552400s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\target\\debug\\.fingerprint\\beg-b7d578d29122da28\\dep-bin-BURHANKHAJA_"
+   0.016580100s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13408380176, nanos: 909474800 } < FileTime { seconds: 13408387041, nanos: 79970600 }
+   0.016859300s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint: fingerprint dirty for beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_)/Check { test: false }/TargetInner { name: "BURHANKHAJA_", doc: true, ..: with_path("C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\src\\main.rs", Edition2021) }
+   0.016916900s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\target\\debug\\.fingerprint\\beg-b7d578d29122da28\\dep-bin-BURHANKHAJA_", reference_mtime: FileTime { seconds: 13408380176, nanos: 909474800 }, stale: "C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\src\\main.rs", stale_mtime: FileTime { seconds: 13408387041, nanos: 79970600 } }))
+   0.018069000s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint: stale: changed "C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\src\\main.rs"
+   0.018089000s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint:           (vs) "C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\target\\debug\\.fingerprint\\beg-da027be2087d0030\\dep-test-bin-BURHANKHAJA_"
+   0.018117400s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint:                FileTime { seconds: 13408387018, nanos: 774625000 } < FileTime { seconds: 13408387041, nanos: 79970600 }
+   0.018343600s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint: fingerprint dirty for beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_)/Check { test: true }/TargetInner { name: "BURHANKHAJA_", doc: true, ..: with_path("C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\src\\main.rs", Edition2021) }
+   0.018379400s  INFO prepare_target{force=false package_id=beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_) target="BURHANKHAJA_"}: cargo::core::compiler::fingerprint:     dirty: FsStatusOutdated(StaleItem(ChangedFile { reference: "C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\target\\debug\\.fingerprint\\beg-da027be2087d0030\\dep-test-bin-BURHANKHAJA_", reference_mtime: FileTime { seconds: 13408387018, nanos: 774625000 }, stale: "C:\\Users\\Mir Mohmmad Luqman\\Documents\\Trath\\Web3HandsOn\\burhankhaja_\\src\\main.rs", stale_mtime: FileTime { seconds: 13408387041, nanos: 79970600 } }))
     Checking beg v0.1.0 (C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.82s
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.15s
