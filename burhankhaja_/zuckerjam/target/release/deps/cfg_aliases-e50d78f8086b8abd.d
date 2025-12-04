@@ -1,7 +1,0 @@
-/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/zuckerjam/target/release/deps/libcfg_aliases-e50d78f8086b8abd.rmeta: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cfg_aliases-0.2.1/src/lib.rs
-
-/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/zuckerjam/target/release/deps/libcfg_aliases-e50d78f8086b8abd.rlib: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cfg_aliases-0.2.1/src/lib.rs
-
-/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/zuckerjam/target/release/deps/cfg_aliases-e50d78f8086b8abd.d: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cfg_aliases-0.2.1/src/lib.rs
-
-/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cfg_aliases-0.2.1/src/lib.rs:
