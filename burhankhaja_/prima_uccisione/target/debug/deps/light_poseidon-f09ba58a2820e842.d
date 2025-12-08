@@ -1,0 +1,9 @@
+/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/prima_uccisione/target/debug/deps/light_poseidon-f09ba58a2820e842.d: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/lib.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/parameters/mod.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/parameters/bn254_x5.rs
+
+/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/prima_uccisione/target/debug/deps/liblight_poseidon-f09ba58a2820e842.rlib: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/lib.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/parameters/mod.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/parameters/bn254_x5.rs
+
+/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/prima_uccisione/target/debug/deps/liblight_poseidon-f09ba58a2820e842.rmeta: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/lib.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/parameters/mod.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/parameters/bn254_x5.rs
+
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/lib.rs:
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/parameters/mod.rs:
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/light-poseidon-0.2.0/src/parameters/bn254_x5.rs:

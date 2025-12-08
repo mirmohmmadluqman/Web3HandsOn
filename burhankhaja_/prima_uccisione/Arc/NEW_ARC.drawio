@@ -1,0 +1,130 @@
+<mxfile host="65bd71144e">
+    <diagram id="new-arc-main" name="Architectural_Diagram_v2">
+        <mxGraphModel dx="643" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="user-actor" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;rounded=1;shadow=1;glass=0;sketch=1;strokeWidth=3;fillColor=#12ab12;gradientColor=#2D872D;fontColor=#000033;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="200" width="40" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-data" value="user : Pubkey&lt;div&gt;sol_amount: u64&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#12ab12;strokeColor=#005700;fontColor=#ffffff;gradientColor=#2D872D;strokeWidth=3;shadow=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="200" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="process-instr" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;process_instruction()&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;br&gt;match instruction_data[0]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;0 =&amp;gt; deposit()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;1 =&amp;gt; withdraw()&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3c800;strokeColor=#B09500;fontColor=#FFFFFF;shadow=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="400" y="180" width="180" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="deposit-fn" value="deposit()&lt;div&gt;&lt;br&gt;instruction_data[0] == 0&lt;/div&gt;" style="whiteSpace=wrap;html=1;verticalAlign=middle;rounded=1;sketch=1;curveFitting=1;jiggle=2;glass=0;shadow=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="120" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="withdraw-fn" value="withdraw()&lt;div&gt;&lt;br&gt;instruction_data[0] == 1&lt;/div&gt;" style="whiteSpace=wrap;html=1;verticalAlign=middle;rounded=1;sketch=1;curveFitting=1;jiggle=2;glass=0;shadow=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="280" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="transfer-fn" value="solana_program::&lt;div&gt;system_instruction::&lt;/div&gt;&lt;div&gt;transfer&lt;/div&gt;" style="whiteSpace=wrap;html=1;verticalAlign=middle;rounded=1;sketch=1;curveFitting=1;jiggle=2;glass=0;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="420" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="vault-pda" value="PROGRAM&lt;div&gt;VAULT PDA&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;shadow=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="560" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sol-box" value="SOL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;gradientColor=none;glass=0;shadow=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="560" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-balance" value="User&lt;div&gt;Balance&lt;/div&gt;" style="shape=sumEllipse;perimeter=ellipsePerimeter;whiteSpace=wrap;html=1;backgroundOutline=1;sketch=1;curveFitting=1;jiggle=2;shadow=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="550" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge1" value="sends data" style="endArrow=classic;html=1;shadow=1;sketch=1;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="user-data" target="process-instr" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="340" y="240" as="sourcePoint"/>
+                        <mxPoint x="400" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge2" value="0" style="endArrow=classic;html=1;shadow=1;sketch=1;endSize=8;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="process-instr" target="deposit-fn" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="580" y="200" as="sourcePoint"/>
+                        <mxPoint x="650" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge3" value="1" style="endArrow=classic;html=1;shadow=1;sketch=1;endSize=8;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="process-instr" target="withdraw-fn" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="580" y="280" as="sourcePoint"/>
+                        <mxPoint x="650" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge4" value="invoke()" style="endArrow=classic;html=1;shadow=1;sketch=1;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="deposit-fn" target="transfer-fn" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="200" as="sourcePoint"/>
+                        <mxPoint x="730" y="420" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="730" y="250"/>
+                            <mxPoint x="850" y="250"/>
+                            <mxPoint x="850" y="400"/>
+                            <mxPoint x="730" y="400"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge5" value="invoke_signed()" style="endArrow=classic;html=1;shadow=1;sketch=1;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="withdraw-fn" target="transfer-fn" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="360" as="sourcePoint"/>
+                        <mxPoint x="690" y="420" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge6" value="" style="endArrow=classic;html=1;shadow=1;sketch=1;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="transfer-fn" target="vault-pda" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="730" y="500" as="sourcePoint"/>
+                        <mxPoint x="730" y="560" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge7" value="" style="endArrow=classic;html=1;shadow=1;sketch=1;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="sol-box" target="vault-pda" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="550" y="590" as="sourcePoint"/>
+                        <mxPoint x="650" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge8" value="" style="endArrow=classic;startArrow=classic;html=1;shadow=1;sketch=1;endSize=8;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="user-balance" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="450" y="590" as="sourcePoint"/>
+                        <mxPoint x="280" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge9" value="" style="endArrow=classic;html=1;shadow=1;sketch=1;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="user-data" target="user-balance" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="265" y="280" as="sourcePoint"/>
+                        <mxPoint x="240" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="aMZqyuYgmGpWoLaMoBHX" name="Overview">
+        <mxGraphModel dx="874" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;prima uccisione v2&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="50" width="350" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="program-box" value="prima uccisione&lt;div&gt;program&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;sketch=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="200" width="150" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="220" width="40" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="deposit-edge" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="actor" target="program-box">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="deposit-label" value="deposit sol (0)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="deposit-edge">
+                    <mxGeometry x="-0.0407" y="-4" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="withdraw-edge" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.6666666666666666;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="program-box" target="actor">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="withdraw-label" value="withdraw sol (1)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="withdraw-edge">
+                    <mxGeometry x="-0.0795" y="-3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

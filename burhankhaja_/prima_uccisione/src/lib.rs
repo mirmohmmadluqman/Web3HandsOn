@@ -1,77 +1,71 @@
-// // fn main() {
-// //     let instruction = 0;
+use solana_program::{
+    account_info::{next_account_info, AccountInfo},
+    entrypoint,
+    entrypoint::ProgramResult,
+    msg,
+    program_error::ProgramError,
+    pubkey::Pubkey,
+};
 
-// //     match instruction {
-// //         0 => println!("This is deposit"),
-// //         1 => println!("This is withdraw"),
-// //         _ => println!("Unknown"),  // default case
-// //     }
-// // }
+entrypoint!(process_instruction);
 
-// use borsh::{BorshDeserialize, BorshSerialize};
-// use solana_program::{
-//     account_info::{next_account_info, AccountInfo},
-//     declare_id,
-//     entrypoint::ProgramResult,
-//     msg,
-//     program_error::ProgramError,
-//     pubkey::Pubkey,
-// };
+pub fn process_instruction(
+    _program_id: &Pubkey,
+    _accounts: &[AccountInfo],
+    instruction_data: &[u8],
+) -> ProgramResult {
+    let instruction_datax = instruction_data;
 
-// mod state;
-// pub use state::*;
+    if instruction_datax.len() < 1 {
+        // or we can write if instruction_datax.is_empty()... I read this on #4 DOC
+        msg!("No instruction provided");
+        return Err(ProgramError::InvalidInstructionData);
+    }
 
-// declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+    match instruction_datax[0] {
+        0 => deposit(program_id, accounts, &instruction_datax[1..]),
+        1 => withdraw(program_id, accounts, &instruction_datax[1..]),
+        _ => Err(ProgramError::InvalidInstructionData)
+        // _ => {
+        //     msg!("Unknown instruction");
+        //     Ok(())
+        // }
+    }
+}
 
-// #[cfg(not(feature = "no-entrypoint"))] // This means:
-//                                        //   “Compile this line ONLY if the feature no-entrypoint is NOT enabled.”
-// use solana_program::entrypoint;
+fn deposit(
+    _program_id: &Pubkey,
+    _accounts: &[AccountInfo],
+    _instruction_data: &[u8],
+) -> ProgramResult {
+    msg!("Deposit");
+    // Functionality:
+    // 1. Get the accounts passed in. Order Matters.
+    let accounts_iter = &mut _accounts.iter();               // _accounts.iter() creates the iterator
+    let user_account = next_account_info(_accounts.iter())?; // next_account_info(...) pulls the actual account out of the iterator
+    let vault_account = next_account_info(_accounts.iter())?;
+    // The ammount would be parsed from instruction_data
+    let amount = u64::from_le_bytes(_instruction_data.try_into().unwrap()); 
 
-// #[cfg(not(feature = "no-entrypoint"))] // This means:
-//                                        //   “Compile this line ONLY if the feature no-entrypoint is NOT enabled.”
-// entrypoint!(process_instruction);
+    Ok(())
+}
 
-// pub fn process_instruction(
-//     program_id: &Pubkey,
-//     accounts: &[AccountInfo],
-//     instruction_data: &[u8],
-// ) -> ProgramResult {
-//     let (instruction_discriminant, instruction_data_inner) = instruction_data.split_at(1);
-//     match instruction_discriminant[0] {
-//         0 => {
-//             msg!("Instruction: Increment");
-//             process_increment_counter(accounts, instruction_data_inner)?;
-//         }
-//         _ => {
-//             msg!("Error: unknown instruction")
-//         }
-//     }
+fn withdraw(
+    _program_id: &Pubkey,
+    _accounts: &[AccountInfo],
+    _instruction_data: &[u8],
+) -> ProgramResult {
+    msg!("Withdraw");
+    // TODO...
+    Ok(())
+}
+
+// fn deposit() -> ProgramResult {
+//     msg!("Deposit");
 //     Ok(())
 // }
 
-// pub fn process_increment_counter(
-//     accounts: &[AccountInfo],
-//     _instruction_data: &[u8],
-// ) -> Result<(), ProgramError> {
-//     let account_info_iter = &mut accounts.iter();
-
-//     let counter_account = next_account_info(account_info_iter)?;
-//     assert!(
-//         counter_account.is_writable,
-//         "Counter account must be writable"
-//     );
-
-//     let mut counter = Counter::try_from_slice(&counter_account.try_borrow_mut_data()?)?;
-//     counter.count += 1;
-fn deposit() {
-    println!("Deposit");
-}
-
-fn withdraw() {
-    println!("Withdraw");
-}
-
-fn main() {
-    let instruction_data = [0];
-    process_instruction(&instruction_data);
-}
+// fn withdraw() -> ProgramResult {
+//     msg!("Withdraw");
+//     Ok(())
+// }

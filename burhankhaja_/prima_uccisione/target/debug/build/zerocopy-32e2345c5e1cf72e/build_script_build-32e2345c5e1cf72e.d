@@ -1,5 +1,5 @@
-C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_\prima_uccisione\target\debug\build\zerocopy-32e2345c5e1cf72e\build_script_build-32e2345c5e1cf72e.d: C:\Users\Mir\ Mohmmad\ Luqman\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerocopy-0.8.31\build.rs
+C:\Users\Mir Mohmmad Luqman\Documents\GitHub\Web3HandsOn\burhankhaja_\prima_uccisione\target\debug\build\zerocopy-32e2345c5e1cf72e\build_script_build-32e2345c5e1cf72e.d: C:\Users\Mir\ Mohmmad\ Luqman\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerocopy-0.8.31\build.rs
 
-C:\Users\Mir Mohmmad Luqman\Documents\Trath\Web3HandsOn\burhankhaja_\prima_uccisione\target\debug\build\zerocopy-32e2345c5e1cf72e\build_script_build-32e2345c5e1cf72e.exe: C:\Users\Mir\ Mohmmad\ Luqman\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerocopy-0.8.31\build.rs
+C:\Users\Mir Mohmmad Luqman\Documents\GitHub\Web3HandsOn\burhankhaja_\prima_uccisione\target\debug\build\zerocopy-32e2345c5e1cf72e\build_script_build-32e2345c5e1cf72e.exe: C:\Users\Mir\ Mohmmad\ Luqman\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerocopy-0.8.31\build.rs
 
 C:\Users\Mir\ Mohmmad\ Luqman\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\zerocopy-0.8.31\build.rs:

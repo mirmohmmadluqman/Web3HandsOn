@@ -1,0 +1,1 @@
+/mnt/c/Users/Mir\ Mohmmad\ Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/prima_uccisione/target/debug/libprima_uccisione.rlib: /mnt/c/Users/Mir\ Mohmmad\ Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/prima_uccisione/src/lib.rs

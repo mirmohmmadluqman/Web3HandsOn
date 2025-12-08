@@ -1,0 +1,10 @@
+/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/prima_uccisione/target/sbpf-solana-solana/release/deps/liblog-6b932bf11ca38bac.rmeta: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/lib.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/macros.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/serde.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/__private_api.rs
+
+/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/prima_uccisione/target/sbpf-solana-solana/release/deps/liblog-6b932bf11ca38bac.rlib: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/lib.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/macros.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/serde.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/__private_api.rs
+
+/mnt/c/Users/Mir Mohmmad Luqman/Documents/Trath/Web3HandsOn/burhankhaja_/prima_uccisione/target/sbpf-solana-solana/release/deps/log-6b932bf11ca38bac.d: /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/lib.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/macros.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/serde.rs /home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/__private_api.rs
+
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/lib.rs:
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/macros.rs:
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/serde.rs:
+/home/mirmohmmadluqman/.cargo/registry/src/index.crates.io-6f17d22bba15001f/log-0.4.29/src/__private_api.rs:
