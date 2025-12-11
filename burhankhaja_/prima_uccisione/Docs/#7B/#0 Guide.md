@@ -1,0 +1,167 @@
+# Guide
+
+#### Read:
+- https://chat.z.ai/space/h0nfzad04v21-ppt
+
+---
+
+# Optional:
+
+## Speeding Up Rust Compilation for Solana Development
+
+Rust compilation can be painfully slow, especially for Solana programs. Here are several effective strategies to speed up your builds:
+
+## 1. Use Parallel Frontend Compilation (Nightly)
+
+The video mentions a new feature that parallelizes the compiler's frontend:
+
+```bash
+# Install nightly Rust
+rustup install nightly
+rustup default nightly
+
+# Build with parallel frontend (using 8 threads)
+RUSTFLAGS="-Z threads=8" cargo build-sbf
+```
+
+This can cut compile times in half for some codebases.
+
+## 2. Use Cargo's Incremental Compilation
+
+Enable incremental compilation in your `Cargo.toml`:
+
+```toml
+[profile.dev]
+incremental = true
+
+[profile.release]
+incremental = true
+```
+
+## 3. Use SBF-Specific Optimizations
+
+For Solana development, you can optimize your build process:
+
+```bash
+# Use faster linking
+RUSTFLAGS="-C link-arg=-Wl,--threads" cargo build-sbf
+
+# Skip generating docs
+cargo build-sbf --release --no-default-features
+```
+
+## 4. Use Check for Development
+
+During development, use `check` instead of `build` when you don't need the final binary:
+
+```bash
+# Much faster than full build
+cargo check-sbf
+```
+
+## 5. Optimize Your Workspace Structure
+
+From your repository structure, I notice you're building from the program directory. This is good! You can further optimize by:
+
+1. **Building only what changed**:
+   ```bash
+   # Build only the program, not client
+   cd program && cargo build-sbf
+   ```
+
+2. **Using cargo-watch for development**:
+   ```bash
+   # Install cargo-watch
+   cargo install cargo-watch
+   
+   # Only rebuild when files change
+   cargo watch -x "check-sbf"
+   ```
+
+## 6. Use a Faster Linker
+
+Replace the default linker with a faster one:
+
+```bash
+# Install lld (LLVM's linker)
+sudo apt-get install lld
+
+# Use it for builds
+RUSTFLAGS="-C link-arg=-fuse-ld=lld" cargo build-sbf
+```
+
+## 7. Cache Dependencies
+
+Use sccache to cache compilation artifacts:
+
+```bash
+# Install sccache
+cargo install sccache
+
+# Use it for builds
+RUSTC_WRAPPER=sccache cargo build-sbf
+```
+
+## 8. Optimize Your Hardware Usage
+
+1. **Use all available cores**:
+   ```bash
+   # Use all available CPU cores
+   cargo build-sbf -j$(nproc)
+   ```
+
+2. **Allocate more memory** if you're using Docker or WSL:
+   ```bash
+   # For Docker
+   docker run -m 4g ...
+   
+   # For WSL, edit .wslconfig to increase memory
+   ```
+
+## 9. Use a Build Script
+
+Create a simple build script to automate these optimizations:
+
+```bash
+#!/bin/bash
+# build.sh
+
+# Set environment variables
+export RUSTFLAGS="-Z threads=8 -C link-arg=-fuse-ld=lld"
+export RUSTC_WRAPPER=sccache
+
+# Build with optimizations
+cd program && cargo build-sbf --release
+```
+
+## 10. Consider Using Solana's Docker Image
+
+The official Solana Docker image is optimized for Solana development:
+
+```bash
+# Pull the image
+docker pull solanalabs/solana:latest
+
+# Run with optimizations
+docker run -it --mount type=bind,source="$(pwd)",target=/mnt/code solanalabs/solana:latest
+```
+
+## 11. Upgrade Your Hardware
+
+If you're frequently compiling Rust code, consider:
+
+- More CPU cores (Rust parallelizes well)
+- Faster SSD storage (I/O is often a bottleneck)
+- More RAM (especially for large projects)
+
+## 12. Future-Proof Solution: MIR-based Parallel Compilation
+
+The video mentions this is coming to stable Rust later this year. When it does, you'll get significant speed improvements without needing nightly.
+
+For now, try combining several of these techniques. The most impactful for your specific case would likely be:
+
+1. Building from program directory (which you're already doing)
+2. Using parallel frontend compilation with nightly
+3. Using a faster linker like lld
+
+Would you like me to help you implement any of these specific solutions?
