@@ -15,4 +15,27 @@ contract Exchange is ERC20 {
     function getReserve() public view returns(uint256) {
         return ERC20(tokenAddress).balanceOf(address(this));
     }
+
+    function addLiquidity(uint256 amountOfToken) public payable returns(uint256) {
+        uint256 lpTokensToMint;
+        uint256 ethReserveBalance = address(this).balance;
+        uint256 tokenReserveBalance = getReserve();
+        
+        ERC20 token = ERC20(tokenAddress); // Binding the ABI to that address
+
+        if (tokenReserveBalance == 0) {
+            token.transferFrom(msg.sender, address(this), amountOfToken); // Transfer the token from the user to the exchange
+
+            // lpTokensToMint = ethReserveBalance = msg.value
+            lpTokensToMint = ethReserveBalance;
+
+            _mint(msg.sender, lpTokensToMint);
+
+            return lpTokensToMint;
+        }
+
+        uint256 ethReservePriorToFunctionCall = ethReserveBalance - msg.value;
+        uint256 mintTokenAmountRequired = (msg.value * tokenReserveBalance) /
+            ethReservePriorToFunctionCall;
+    }   
 }

@@ -1,0 +1,247 @@
+<mxfile host="app.diagrams.net" modified="2024-12-05T10:30:00.000Z" agent="Mozilla/5.0">
+    <diagram id="uniswap-v1-architecture" name="Uniswap V1 Architecture">
+        <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="1" background="#1a1a2e">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <!-- Title with gradient background -->
+                <mxCell id="title-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#0f3460;strokeWidth=3;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="20" width="500" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="title" value="🔄 UNISWAP V1 DEX ARCHITECTURE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#e94560;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="25" width="500" height="50" as="geometry"/>
+                </mxCell>
+                
+                <!-- User Card -->
+                <mxCell id="user-card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#e94560;strokeWidth=3;shadow=1;arcSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="110" width="160" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-icon" value="👤" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=36;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="115" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-text" value="USER WALLET" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontColor=#ffffff;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="160" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-sub" value="MetaMask / EOA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#a0a0a0;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="185" width="140" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Token Contract Box -->
+                <mxCell id="token-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f3460;strokeColor=#00d9ff;strokeWidth=3;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="290" width="320" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="token-header" value="📜 TOKEN.SOL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#00d9ff;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="300" width="320" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="token-sub" value="ERC-20 Standard Token" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#a0a0a0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="330" width="320" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Token State Section -->
+                <mxCell id="token-state-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#00d9ff;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="360" width="290" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="token-state-title" value="📦 STATE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=13;fontColor=#00d9ff;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="65" y="365" width="100" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="token-state-content" value="• name: &quot;Token&quot;&#xa;• symbol: &quot;TKN&quot;&#xa;• totalSupply: 1,000,000 TKN&#xa;• balances: mapping(address → uint)&#xa;• allowances: mapping(address → mapping)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#ffffff;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="65" y="390" width="270" height="75" as="geometry"/>
+                </mxCell>
+                
+                <!-- Token Functions Section -->
+                <mxCell id="token-func-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#00ff88;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="480" width="290" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="token-func-title" value="⚡ FUNCTIONS (Inherited)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=13;fontColor=#00ff88;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="65" y="485" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="token-func-content" value="• transfer(to, amount)&#xa;• approve(spender, amount)&#xa;• transferFrom(from, to, amount)&#xa;• balanceOf(account) → view&#xa;• allowance(owner, spender) → view" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#ffffff;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="65" y="510" width="270" height="90" as="geometry"/>
+                </mxCell>
+                
+                <!-- Exchange Contract Box -->
+                <mxCell id="exchange-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f3460;strokeColor=#e94560;strokeWidth=3;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="290" width="380" height="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="exchange-header" value="🏦 EXCHANGE.SOL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontColor=#e94560;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="300" width="380" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="exchange-sub" value="AMM + LP Token (ERC-20)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#a0a0a0;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="330" width="380" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Exchange State Section -->
+                <mxCell id="exchange-state-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#e94560;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="415" y="360" width="350" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="exchange-state-title" value="📦 STATE" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=13;fontColor=#e94560;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="365" width="100" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="exchange-state-content" value="• tokenAddress: address&#xa;• ETH Reserve: address(this).balance&#xa;• Token Reserve: getReserve()&#xa;• LP Supply: totalSupply()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#ffffff;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="390" width="330" height="55" as="geometry"/>
+                </mxCell>
+                
+                <!-- Exchange Liquidity Functions -->
+                <mxCell id="exchange-liq-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#ffcc00;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="415" y="460" width="350" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="exchange-liq-title" value="💧 LIQUIDITY FUNCTIONS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=13;fontColor=#ffcc00;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="465" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="exchange-liq-content" value="• getReserve() → view token balance&#xa;• addLiquidity(amountOfToken) payable&#xa;   ↳ Mints LP tokens proportional to deposit&#xa;• removeLiquidity(lpTokens)&#xa;   ↳ Burns LP, returns ETH + Tokens" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#ffffff;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="490" width="330" height="85" as="geometry"/>
+                </mxCell>
+                
+                <!-- Exchange Swap Functions -->
+                <mxCell id="exchange-swap-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#00ff88;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="415" y="590" width="350" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="exchange-swap-title" value="🔄 SWAP FUNCTIONS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=13;fontColor=#00ff88;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="595" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="exchange-swap-content" value="• ethToTokenSwap(minTokens) payable&#xa;   ↳ Swap ETH → Tokens (1% fee)&#xa;• tokenToEthSwap(tokens, minETH)&#xa;   ↳ Swap Tokens → ETH (1% fee)&#xa;• getOutputAmountFromSwap() pure&#xa;   ↳ Calculate output using x*y=k formula" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#ffffff;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="620" width="330" height="110" as="geometry"/>
+                </mxCell>
+                
+                <!-- Liquidity Pool Card -->
+                <mxCell id="pool-card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#ffcc00;strokeWidth=3;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="380" width="200" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="pool-icon" value="💧" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=32;" parent="1" vertex="1">
+                    <mxGeometry x="895" y="390" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="pool-title" value="LIQUIDITY POOL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontColor=#ffcc00;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="430" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="pool-content" value="ETH Reserve&#xa;+&#xa;TOKEN Reserve&#xa;&#xa;x × y = k (constant)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="455" width="180" height="80" as="geometry"/>
+                </mxCell>
+                
+                <!-- LP Token Card -->
+                <mxCell id="lp-card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#00ff88;strokeWidth=3;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="220" width="200" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="lp-icon" value="🪙" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=28;" parent="1" vertex="1">
+                    <mxGeometry x="895" y="225" width="90" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="lp-title" value="LP TOKEN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontColor=#00ff88;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="260" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="lp-content" value="• Represents pool share&#xa;• Minted on addLiquidity&#xa;• Burned on removeLiquidity" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="285" width="180" height="55" as="geometry"/>
+                </mxCell>
+                
+                <!-- AMM Formula Card -->
+                <mxCell id="amm-card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16213e;strokeColor=#e94560;strokeWidth=3;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="570" width="200" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="amm-title" value="📐 AMM FORMULA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontColor=#e94560;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="580" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="amm-content" value="x × y = (x + Δx)(y - Δy)&#xa;&#xa;With 1% Fee:&#xa;Δy = (Δx × 99 × y)&#xa;      ─────────────&#xa;      (x × 100 + Δx × 99)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#ffffff;fontFamily=Courier New;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="605" width="180" height="100" as="geometry"/>
+                </mxCell>
+                
+                <!-- Deployment Steps Card -->
+                <mxCell id="deploy-card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f3460;strokeColor=#00d9ff;strokeWidth=3;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="660" width="320" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="deploy-title" value="🚀 DEPLOYMENT FLOW" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=16;fontColor=#00d9ff;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="670" width="320" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="deploy-content" value="1️⃣ Deploy Token.sol → TOKEN_ADDR&#xa;2️⃣ Deploy Exchange.sol(TOKEN_ADDR)&#xa;3️⃣ User approves Exchange for TOKEN&#xa;4️⃣ Add initial liquidity (ETH + TOKEN)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#ffffff;spacingLeft=20;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="705" width="300" height="95" as="geometry"/>
+                </mxCell>
+                
+                <!-- Arrows with better styling -->
+                <!-- User to Token: approve -->
+                <mxCell id="arrow1" value="" style="endArrow=classic;html=1;strokeColor=#00d9ff;strokeWidth=3;exitX=0;exitY=0.7;entryX=0.5;entryY=0;curved=1;shadow=1;" parent="1" source="user-card" target="token-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow1-label" value="approve()" style="text;html=1;strokeColor=none;fillColor=#16213e;align=center;verticalAlign=middle;fontSize=11;fontColor=#00d9ff;fontStyle=1;rounded=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="220" width="80" height="25" as="geometry"/>
+                </mxCell>
+                
+                <!-- User to Exchange: swaps -->
+                <mxCell id="arrow2" value="" style="endArrow=classic;html=1;strokeColor=#e94560;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;curved=0;shadow=1;" parent="1" source="user-card" target="exchange-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow2-label" value="addLiquidity()&#xa;removeLiquidity()&#xa;swaps()" style="text;html=1;strokeColor=none;fillColor=#16213e;align=center;verticalAlign=middle;fontSize=10;fontColor=#e94560;fontStyle=1;rounded=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="595" y="230" width="100" height="50" as="geometry"/>
+                </mxCell>
+                
+                <!-- Exchange to Token: transferFrom -->
+                <mxCell id="arrow3" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=3;exitX=0;exitY=0.5;entryX=1;entryY=0.5;shadow=1;" parent="1" source="exchange-box" target="token-box" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow3-label" value="transferFrom()" style="text;html=1;strokeColor=none;fillColor=#16213e;align=center;verticalAlign=middle;fontSize=11;fontColor=#ffffff;fontStyle=1;rounded=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="265" y="500" width="100" height="25" as="geometry"/>
+                </mxCell>
+                
+                <!-- Exchange to Pool -->
+                <mxCell id="arrow4" value="" style="endArrow=classic;html=1;strokeColor=#ffcc00;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;dashPattern=8 4;shadow=1;" parent="1" source="exchange-box" target="pool-card" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow4-label" value="Manages" style="text;html=1;strokeColor=none;fillColor=#16213e;align=center;verticalAlign=middle;fontSize=11;fontColor=#ffcc00;fontStyle=1;rounded=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="790" y="445" width="70" height="25" as="geometry"/>
+                </mxCell>
+                
+                <!-- Exchange to LP Token -->
+                <mxCell id="arrow5" value="" style="endArrow=classic;html=1;strokeColor=#00ff88;strokeWidth=3;exitX=1;exitY=0.1;entryX=0;entryY=0.7;dashed=1;dashPattern=8 4;shadow=1;" parent="1" source="exchange-box" target="lp-card" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow5-label" value="Mints/Burns" style="text;html=1;strokeColor=none;fillColor=#16213e;align=center;verticalAlign=middle;fontSize=11;fontColor=#00ff88;fontStyle=1;rounded=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="790" y="305" width="85" height="25" as="geometry"/>
+                </mxCell>
+                
+                <!-- User receives LP Token -->
+                <mxCell id="arrow6" value="" style="endArrow=classic;html=1;strokeColor=#00ff88;strokeWidth=2;exitX=1;exitY=0.5;entryX=0.5;entryY=0;dashed=1;dashPattern=4 2;curved=1;shadow=1;" parent="1" source="user-card" target="lp-card" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow6-label" value="Receives LP" style="text;html=1;strokeColor=none;fillColor=#16213e;align=center;verticalAlign=middle;fontSize=10;fontColor=#00ff88;fontStyle=1;rounded=1;spacing=3;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="160" width="80" height="22" as="geometry"/>
+                </mxCell>
+                
+                <!-- Legend -->
+                <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f3460;strokeColor=#a0a0a0;strokeWidth=2;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="110" width="180" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-title" value="📋 LEGEND" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontColor=#ffffff;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="120" width="180" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#00d9ff;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="1095" y="155" width="25" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg1-text" value="Token Contract" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="153" width="120" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#e94560;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="1095" y="185" width="25" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg2-text" value="Exchange Contract" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="183" width="120" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffcc00;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="1095" y="215" width="25" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg3-text" value="Liquidity Functions" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="213" width="120" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#00ff88;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="1095" y="245" width="25" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg4-text" value="Swap / LP Token" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="243" width="120" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg5" value="- - - →" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#a0a0a0;" parent="1" vertex="1">
+                    <mxGeometry x="1095" y="273" width="35" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg5-text" value="Internal Flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="273" width="120" height="22" as="geometry"/>
+                </mxCell>
+                
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
