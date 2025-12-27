@@ -1,1 +1,10 @@
 Streaming transaction logs mentioning GA7CGitMusYA4y4uUPgRKLbHkRxhjtHXmio6bAJYufMR. Confirmed commitment
+Transaction executed in slot 204:
+  Signature: 6tpUuQpLAGcDqCrjMH373zTdn8vPwCkXPWNZCBSZq4aT7SbBVgvrqQx8RXiSZurHhRW8oEEcmtnQLMvAUpUDJBr
+  Status: Ok
+  Log Messages:
+    Program GA7CGitMusYA4y4uUPgRKLbHkRxhjtHXmio6bAJYufMR invoke [1]
+    Program log: Instruction: Initialize
+    Program log: Hello, world!
+    Program GA7CGitMusYA4y4uUPgRKLbHkRxhjtHXmio6bAJYufMR consumed 375 of 200000 compute units
+    Program GA7CGitMusYA4y4uUPgRKLbHkRxhjtHXmio6bAJYufMR success
