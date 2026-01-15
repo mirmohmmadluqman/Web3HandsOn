@@ -4,3 +4,4 @@
 
 ### Note:
 - But all documentaries up to classics are in #6 folder...
+- Sorry for this issue but documents are located at [here](https://github.com/mirmohmmadluqman/Web3HandsOn/tree/main/burhankhaja_/Docs)
